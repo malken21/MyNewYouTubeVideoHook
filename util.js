@@ -6,7 +6,12 @@ function getYouTubeService() {
         .setClientSecret(CLIENT_SECRET)
         .setCallbackFunction('authCallback')
         .setPropertyStore(PropertiesService.getScriptProperties())
-        .setScope('https://www.googleapis.com/auth/youtube.readonly');
+        .setScope('https://www.googleapis.com/auth/youtube.readonly')
+        .setTokenHeaders({
+            'Authorization': 'Basic ' + Utilities.base64Encode(CLIENT_ID + ':' + CLIENT_SECRET)
+        })
+        .setParam('access_type', 'offline') // リフレッシュトークンを取得するために必要
+        .setParam('approval_prompt', 'force'); // 初回のみユーザーに再度認証を促す
 }
 
 function authCallback(request) {
