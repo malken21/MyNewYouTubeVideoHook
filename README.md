@@ -18,8 +18,8 @@ GASプロジェクトID はGASエディタのURLの
 `https://script.google.com/u/0/home/projects/GASプロジェクトID/edit`
 に書かれています。
 
-<./config.js> に値を設定して、
-<./code.js> の `function authorize()` を実行すると認証することができます。
+`config.js` に値を設定して、
+`code.js` の `function authorize()` を実行すると認証することができます。
 
-<./code.js> の `function checkNewVideos()` を 10分に一回実行されるようにトリガーを作成することで
+`code.js` の `function checkNewVideos()` を 10分に一回実行されるようにトリガーを作成することで
 使えるようになります。
