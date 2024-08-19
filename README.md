@@ -21,5 +21,5 @@ GASプロジェクトID はGASエディタのURLの
 `config.js` に値を設定して、
 `code.js` の `function authorize()` を実行すると認証することができます。
 
-`code.js` の `function checkNewVideos()` を 10分に一回実行されるようにトリガーを作成することで
+`code.js` の `function checkNewVideos()` を 1時間に一回実行されるようにトリガーを作成することで
 使えるようになります。
